@@ -1,4 +1,4 @@
-package ca.benjaminnielsen.domain.dynamoClass;
+package ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 

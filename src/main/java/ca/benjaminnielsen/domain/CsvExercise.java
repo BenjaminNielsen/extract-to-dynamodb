@@ -1,12 +1,11 @@
 package ca.benjaminnielsen.domain;
 
-import ca.benjaminnielsen.domain.dynamoClass.DynamoCardioExercise;
-import ca.benjaminnielsen.domain.dynamoClass.DynamoExercise;
-import ca.benjaminnielsen.domain.dynamoClass.DynamoMuscleExercise;
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoCardioExercise;
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoExercise;
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoMuscleExercise;
 import com.opencsv.bean.CsvBindByName;
+
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CsvExercise {
     @CsvBindByName(column = "Date", required = true)

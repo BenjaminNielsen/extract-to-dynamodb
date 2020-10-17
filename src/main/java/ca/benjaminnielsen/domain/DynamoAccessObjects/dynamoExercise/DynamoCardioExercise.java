@@ -1,4 +1,4 @@
-package ca.benjaminnielsen.domain.dynamoClass;
+package ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
@@ -64,7 +64,7 @@ public class DynamoCardioExercise extends DynamoExercise {
         this.exerciseDate = exerciseDate;
     }
 
-    @DynamoDBRangeKey(attributeName="distance")
+    @DynamoDBAttribute(attributeName = "distance")
     public double getDistance() {
         return distance;
     }
@@ -73,7 +73,7 @@ public class DynamoCardioExercise extends DynamoExercise {
         this.distance = distance;
     }
 
-    @DynamoDBRangeKey(attributeName="distanceUnit")
+    @DynamoDBAttribute(attributeName = "distanceUnit")
     public String getDistanceUnit() {
         return distanceUnit;
     }
@@ -82,7 +82,7 @@ public class DynamoCardioExercise extends DynamoExercise {
         this.distanceUnit = distanceUnit;
     }
 
-    @DynamoDBRangeKey(attributeName="seconds")
+    @DynamoDBAttribute(attributeName = "seconds")
     public int getSeconds() {
         return seconds;
     }

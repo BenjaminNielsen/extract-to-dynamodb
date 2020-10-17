@@ -1,6 +1,6 @@
 package ca.benjaminnielsen.domain
 
-import ca.benjaminnielsen.domain.dynamoClass.DynamoCardioExercise
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoCardioExercise
 import spock.lang.Shared
 import spock.lang.Specification
 

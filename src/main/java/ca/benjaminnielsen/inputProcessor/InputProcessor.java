@@ -1,6 +1,6 @@
 package ca.benjaminnielsen.inputProcessor;
 
-import ca.benjaminnielsen.domain.dynamoClass.DynamoExercise;
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoExercise;
 
 import java.util.stream.Stream;
 

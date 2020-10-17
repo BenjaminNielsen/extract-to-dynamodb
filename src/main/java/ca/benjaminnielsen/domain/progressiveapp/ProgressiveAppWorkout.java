@@ -1,18 +1,17 @@
 
 package ca.benjaminnielsen.domain.progressiveapp;
 
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoCardioExercise;
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoExercise;
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoMuscleExercise;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.time.Instant;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.stream.Stream;
-
-import ca.benjaminnielsen.domain.dynamoClass.DynamoCardioExercise;
-import ca.benjaminnielsen.domain.dynamoClass.DynamoExercise;
-import ca.benjaminnielsen.domain.dynamoClass.DynamoMuscleExercise;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 public class ProgressiveAppWorkout {
 
@@ -98,7 +97,7 @@ public class ProgressiveAppWorkout {
         Stream<DynamoExercise> exerciseStream = this.activities
                 .parallelStream()
                 .flatMap(this::activityToDynamo);
-        return null;
+        return exerciseStream;
     }
 
     private Stream<DynamoExercise> activityToDynamo(Activity a){

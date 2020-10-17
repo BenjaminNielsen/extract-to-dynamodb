@@ -1,7 +1,7 @@
 package ca.benjaminnielsen.inputProcessor;
 
 import ca.benjaminnielsen.domain.CsvExercise;
-import ca.benjaminnielsen.domain.dynamoClass.DynamoExercise;
+import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoExercise;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
