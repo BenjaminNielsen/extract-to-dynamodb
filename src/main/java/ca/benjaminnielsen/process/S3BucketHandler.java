@@ -25,7 +25,6 @@ public class S3BucketHandler {
         String scrBucketName = record.getS3().getBucket().getName();
         String srcKey = record.getS3().getObject().getUrlDecodedKey();
 
-
         S3Object s3Object;
         try {
             s3Object = client.getObject(new GetObjectRequest(scrBucketName, srcKey));

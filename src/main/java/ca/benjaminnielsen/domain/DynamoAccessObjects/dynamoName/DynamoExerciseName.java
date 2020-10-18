@@ -18,6 +18,9 @@ public class DynamoExerciseName {
     @DynamoDBAttribute(attributeName = "url")
     String urlName;
 
+    public DynamoExerciseName() {
+    }
+
     public DynamoExerciseName(String name, Set<String> nameAlternatives, String urlName) {
         this.name = name;
         this.nameAlternatives = nameAlternatives;

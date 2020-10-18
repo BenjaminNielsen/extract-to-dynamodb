@@ -1,6 +1,5 @@
 package ca.benjaminnielsen;
 
-import ca.benjaminnielsen.domain.CsvExercise;
 import ca.benjaminnielsen.inputProcessor.CsvProcessor;
 import ca.benjaminnielsen.inputProcessor.InputProcessor;
 import ca.benjaminnielsen.inputProcessor.JsonProcessor;
@@ -13,6 +12,7 @@ import com.amazonaws.services.lambda.runtime.events.S3Event;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class CsvToDynamoDbApplication implements RequestHandler<S3Event, String> {
 
@@ -24,7 +24,7 @@ public class CsvToDynamoDbApplication implements RequestHandler<S3Event, String>
         S3BucketHandler s3BucketHandler = new S3BucketHandler(s3event);
         logger.log("Handler Initialized\n");
 
-        DynamoDbHandler dbHandler = new DynamoDbHandler();
+        DynamoDbHandler dbHandler = DynamoDbHandler.getInstance();
         logger.log("DynamoHandler Initialized\n");
 
         InputStreamReader streamReader;
@@ -41,11 +41,14 @@ public class CsvToDynamoDbApplication implements RequestHandler<S3Event, String>
         processors.add(new CsvProcessor(streamReader));
         logger.log("Csv to Bean created\n");
 
-        if(includesJsonProcessor())
+        if (includesJsonProcessor())
             processors.add(new JsonProcessor(getJsonInputStream()));
 
-        processors.stream().parallel().forEach(inputProcessor -> inputProcessor.getDynamoStream().forEach(dbHandler::saveExercise));
+        processors.stream().parallel().forEach(
+                inputProcessor -> dbHandler.saveAllExercise(inputProcessor.getDynamoStream().collect(Collectors.toList()))
+        );
 
+        dbHandler.setLastExerciseLoad();
         return "Lambda Function completed successfully";
     }
 

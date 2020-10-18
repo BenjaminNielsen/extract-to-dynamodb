@@ -1,25 +1,30 @@
 package ca.benjaminnielsen.nameNormalization;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class NamesContainer {
-    ArrayList<ExerciseName> exerciseNameArrayList = new ArrayList<>();
+    List<ExerciseName> exerciseNameList = new ArrayList<>();
 
     public String getDbName(String inputName) {
-        Optional<ExerciseName> optionalExerciseName = exerciseNameArrayList.stream()
+        Optional<ExerciseName> optionalExerciseName = exerciseNameList.stream()
                 .parallel()
                 .filter(exerciseName -> exerciseName.isAlternative(inputName))
                 .findAny();
 
         if (optionalExerciseName.isEmpty()) {
-            exerciseNameArrayList.add(new ExerciseName(inputName));
+            exerciseNameList.add(new ExerciseName(inputName));
             return inputName;
         }
         return optionalExerciseName.get().dbName;
     }
 
-    public void setExerciseNameArrayList(ArrayList<ExerciseName> exerciseNameArrayList) {
-        this.exerciseNameArrayList = exerciseNameArrayList;
+    public void setExerciseNameList(List<ExerciseName> exerciseNameList) {
+        this.exerciseNameList = exerciseNameList;
+    }
+
+    public List<ExerciseName> getExerciseNameList() {
+        return exerciseNameList;
     }
 }

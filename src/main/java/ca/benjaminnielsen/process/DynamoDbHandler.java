@@ -3,27 +3,44 @@ package ca.benjaminnielsen.process;
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoExercise;
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoLastLoadDate.DynamoLastLoadDate;
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoName.DynamoExerciseName;
+import ca.benjaminnielsen.nameNormalization.ExerciseName;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.google.common.collect.Iterables;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DynamoDbHandler {
+    private static DynamoDbHandler handler_instance;
     private final DynamoDBMapper mapper;
+    static final int DYNAMODB_BATCH_LIMIT = 25;
 
-    public DynamoDbHandler() {
+    private DynamoDbHandler() {
         mapper = new DynamoDBMapper(AmazonDynamoDBClientBuilder.standard().build());
+    }
+
+    // static method to create instance of Singleton class
+    public static DynamoDbHandler getInstance() {
+        if (handler_instance == null)
+            handler_instance = new DynamoDbHandler();
+
+        return handler_instance;
     }
 
     public void saveExercise(DynamoExercise dynamoExercise) {
         mapper.save(dynamoExercise);
     }
 
+    public void saveAllExercise(List<DynamoExercise> dynamoExercises) {
+        Iterables.partition(dynamoExercises, DYNAMODB_BATCH_LIMIT).forEach(mapper::batchSave);
+    }
+
     public void setLastExerciseLoad() {
-        //TODO: Complete this
+        mapper.save(new Date());
     }
 
     public LocalDateTime getLastExerciseLoadDate() {
@@ -34,11 +51,15 @@ public class DynamoDbHandler {
     }
 
     public List<DynamoExerciseName> getAllExerciseNames() {
-        DynamoDBQueryExpression<DynamoExerciseName> queryExpression = new DynamoDBQueryExpression<>();
-        return mapper.query(DynamoExerciseName.class, queryExpression);
+        DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+        return mapper.scan(DynamoExerciseName.class, scanExpression);
     }
 
-    public void setExerciseName() {
+    public void setExerciseNames(List<ExerciseName> exerciseNames) {
+        List<DynamoExerciseName> dynamoExerciseNames = exerciseNames.parallelStream()
+                .map(ExerciseName::toDynamoExerciseName)
+                .collect(Collectors.toList());
+        Iterables.partition(dynamoExerciseNames, DYNAMODB_BATCH_LIMIT).forEach(mapper::batchSave);
 
     }
 
