@@ -11,6 +11,7 @@ class ProgressiveAppExerciseTest extends Specification {
         InputStream targetStream = new FileInputStream(initialFile)
         InputStreamReader streamReader = new InputStreamReader(targetStream)
         Gson gson =  new Gson()
+        LIbrary lIbrary = new LIbrary()
         when:
         ProgressiveAppWorkout[] exercises = gson.fromJson(streamReader, ProgressiveAppWorkout[].class)
         then:

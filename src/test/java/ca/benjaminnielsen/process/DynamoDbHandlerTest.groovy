@@ -43,4 +43,25 @@ class DynamoDbHandlerTest extends Specification {
         cleanup:
         dbHandler.mapper.delete(newName)
     }
+
+    def "name generator adding alternative doesn't create new items"() {
+        given:
+        final String ALTERNATIVE_EXERCISE_NAME = 'Bench Press (Barbell)'
+        DynamoExerciseName newName = new DynamoExerciseName()
+        NameGenerator nameGenerator
+
+        when:
+        nameGenerator = NameGenerator.getInstance()
+        List<DynamoExerciseName> originalExerciseNames = dbHandler.getAllExerciseNames()
+        String benchDbName = nameGenerator.toDbName(ALTERNATIVE_EXERCISE_NAME)
+        nameGenerator.uploadCurrentNames()
+        List<DynamoExerciseName> newExerciseNames = dbHandler.getAllExerciseNames()
+
+        then:
+        originalExerciseNames.get(0).nameAlternatives.size() == --newExerciseNames.get(0).nameAlternatives.size()
+        benchDbName == 'Barbell Bench Press'
+
+        cleanup:
+        dbHandler.mapper.save(originalExerciseNames)
+    }
 }

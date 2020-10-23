@@ -12,14 +12,14 @@ public class ExerciseName {
     String urlName; //how this exercise would appear in a url
 
     public ExerciseName(String dbName) {
-        this.dbName = dbName;
+        this.dbName = dbName.toUpperCase();
         nameAlternatives = new HashSet<>(2); //As of now, there are only likely to be 2 alternatives max
         nameAlternatives.add(dbName);
-        urlName = toPrettyURL(dbName);
+        urlName = toPrettyURL(dbName.toLowerCase());
     }
 
     public ExerciseName(String dbName, Set<String> nameAlternatives, String urlName) {
-        this.dbName = dbName;
+        this.dbName = dbName.toUpperCase();
         this.nameAlternatives = nameAlternatives;
         this.urlName = urlName;
     }
@@ -35,8 +35,8 @@ public class ExerciseName {
     }
 
     public boolean isAlternative(String name) {
-        //keeping ugly if/else because I expect more complex logic later
-        return name.contains(dbName) || dbName.contains(name);
+        name = name.toUpperCase();
+        return nameAlternatives.contains(name);
     }
 
     public DynamoExerciseName toDynamoExerciseName() {
