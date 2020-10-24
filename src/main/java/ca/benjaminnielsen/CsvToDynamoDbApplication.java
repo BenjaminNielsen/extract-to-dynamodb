@@ -1,9 +1,10 @@
 package ca.benjaminnielsen;
 
+import ca.benjaminnielsen.awsio.DynamoDbHandler;
 import ca.benjaminnielsen.inputProcessor.CsvProcessor;
 import ca.benjaminnielsen.inputProcessor.InputProcessor;
 import ca.benjaminnielsen.inputProcessor.JsonProcessor;
-import ca.benjaminnielsen.process.DynamoDbHandler;
+
 import ca.benjaminnielsen.process.S3BucketHandler;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;

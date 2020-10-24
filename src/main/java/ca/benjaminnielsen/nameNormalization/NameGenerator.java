@@ -1,8 +1,8 @@
 package ca.benjaminnielsen.nameNormalization;
 
+import ca.benjaminnielsen.awsio.DynamoDbHandler;
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoName.DynamoExerciseName;
 import ca.benjaminnielsen.domain.ExerciseName;
-import ca.benjaminnielsen.process.DynamoDbHandler;
 
 import java.util.List;
 import java.util.stream.Collectors;

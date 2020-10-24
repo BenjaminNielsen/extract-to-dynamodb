@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 public class JsonProcessor extends InputProcessor {
 
-    public Gson gson = new Gson();
+    private final Gson GSON = new Gson();
     private final InputStreamReader streamReader;
 
     public JsonProcessor(InputStreamReader streamReader){
@@ -18,7 +18,7 @@ public class JsonProcessor extends InputProcessor {
     }
 
     public Stream<ProgressiveAppWorkout> getProgressiveWorkoutStream(){
-       return Arrays.stream(gson.fromJson(streamReader, ProgressiveAppWorkout[].class));
+       return Arrays.stream(GSON.fromJson(streamReader, ProgressiveAppWorkout[].class));
     }
 
     @Override
