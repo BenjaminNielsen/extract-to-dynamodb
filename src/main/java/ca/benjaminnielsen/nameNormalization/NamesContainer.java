@@ -1,5 +1,7 @@
 package ca.benjaminnielsen.nameNormalization;
 
+import ca.benjaminnielsen.domain.ExerciseName;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +19,7 @@ public class NamesContainer {
             exerciseNameList.add(new ExerciseName(inputName));
             return inputName;
         }
-        return optionalExerciseName.get().dbName;
+        return optionalExerciseName.get().getDbName();
     }
 
     public void setExerciseNameList(List<ExerciseName> exerciseNameList) {

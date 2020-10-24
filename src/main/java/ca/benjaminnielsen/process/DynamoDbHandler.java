@@ -3,7 +3,7 @@ package ca.benjaminnielsen.process;
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoExercise;
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoLastLoadDate.DynamoLastLoadDate;
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoName.DynamoExerciseName;
-import ca.benjaminnielsen.nameNormalization.ExerciseName;
+import ca.benjaminnielsen.domain.ExerciseName;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class DynamoDbHandler {
-    private static DynamoDbHandler handler_instance;
+    private static DynamoDbHandler handlerInstance;
     private final DynamoDBMapper mapper;
     static final int DYNAMODB_BATCH_LIMIT = 25;
 
@@ -25,10 +25,10 @@ public class DynamoDbHandler {
 
     // static method to create instance of Singleton class
     public static DynamoDbHandler getInstance() {
-        if (handler_instance == null)
-            handler_instance = new DynamoDbHandler();
+        if (handlerInstance == null)
+            handlerInstance = new DynamoDbHandler();
 
-        return handler_instance;
+        return handlerInstance;
     }
 
     public void saveExercise(DynamoExercise dynamoExercise) {

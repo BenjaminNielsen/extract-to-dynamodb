@@ -1,6 +1,7 @@
 package ca.benjaminnielsen.nameNormalization;
 
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoName.DynamoExerciseName;
+import ca.benjaminnielsen.domain.ExerciseName;
 import ca.benjaminnielsen.process.DynamoDbHandler;
 
 import java.util.List;

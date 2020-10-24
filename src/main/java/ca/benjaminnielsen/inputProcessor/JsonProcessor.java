@@ -1,7 +1,7 @@
 package ca.benjaminnielsen.inputProcessor;
 
 import ca.benjaminnielsen.domain.DynamoAccessObjects.dynamoExercise.DynamoExercise;
-import ca.benjaminnielsen.domain.progressiveapp.ProgressiveAppWorkout;
+import ca.benjaminnielsen.domain.input.formats.progressiveapp.ProgressiveAppWorkout;
 import com.google.gson.Gson;
 
 import java.io.InputStreamReader;

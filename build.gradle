@@ -5,22 +5,25 @@ plugins {
 
 group 'ca.benjaminnielsen'
 version '1.0.3-SNAPSHOT'
+sourceCompatibility = 11
 
 repositories {
     mavenCentral()
+    mavenLocal()
     jcenter()
 }
 
 dependencies {
     implementation 'com.opencsv:opencsv:5.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
     implementation 'com.amazonaws:aws-lambda-java-events:3.1.0'
     implementation 'com.amazonaws:aws-java-sdk-s3:1.11.578'
     implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.11.870'
-    // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    implementation 'com.google.code.gson:gson:2.8.6'
+
     implementation("com.google.guava:guava:30.0-jre")
-    implementation 'ca.benjaminnielsen:model-domain:1.+'
+    implementation ('ca.benjaminnielsen:exercise-model-domain:1.0.1')
 
     runtimeOnly 'com.amazonaws:aws-lambda-java-log4j2:1.2.0'
 
