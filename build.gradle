@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'com.github.johnrengelman.shadow' version '6.0.0'
+    id 'groovy'
 }
 
 group 'ca.benjaminnielsen'
@@ -22,8 +23,8 @@ dependencies {
     implementation 'com.amazonaws:aws-java-sdk-s3:1.11.578'
     implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.11.870'
 
-    implementation ('ca.benjaminnielsen:exercise-model-domain:1.0.1')
-    implementation ('ca.benjaminnielsen:aws-io:1.0.1')
+    implementation 'ca.benjaminnielsen:exercise-model-domain:1.0.1'
+    implementation 'ca.benjaminnielsen:aws-io:1.0.1'
 
     runtimeOnly 'com.amazonaws:aws-lambda-java-log4j2:1.2.0'
 
