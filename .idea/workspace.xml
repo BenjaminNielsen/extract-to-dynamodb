@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="csv-to-dynamodb" />
+      <module name="csv-to-dynamodb.main" />
+      <module name="csv-to-dynamodb.test" />
+      <module name="exercise-model-domain" />
+      <module name="exercise-model-domain.main" />
+      <module name="exercise-model-domain.test" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba679e3a-d3de-4e1d-9d8f-491859701bc1" name="Default Changelist" comment="Moves aws-io into its own gradle project for use in other projects">
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/.gradle/6.6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/build/classes/java/main/ca/benjaminnielsen/domain/ExerciseName.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/build/classes/java/main/ca/benjaminnielsen/domain/ExerciseName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/build/libs/exercise-model-domain-1.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/build/libs/exercise-model-domain-1.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/build/poms/pom-default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/build/poms/pom-default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise-model-domain/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-model-domain/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/../aws-io">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/../exercise-model-domain">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/model-domain">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/../name-normalization-and-centralization">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/../exercise-model-domain">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/../aws-io">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="ProjectId" id="1jI9LEfXiY1OB9Pa08YDsGwGjqg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Spock" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Spock" value="spock.lang.Specification" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exercise-model-domain/src/main/java" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ca.benjaminnielsen.awsio" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="spock.lang.Specification" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../exercise-model-domain/src/main/java" />
+      <recent name="$PROJECT_DIR$/gradle/wrapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ca.benjaminnielsen.domain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../aws-io/src/test/groovy/ca.benjaminnielsen.awsio" />
+      <recent name="$PROJECT_DIR$/../aws-io/src/test/groovy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.NameNormalizationAndCentralizationApplication">
+    <configuration name="NameNormalizationAndCentralizationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="name.normalization.NameNormalizationAndCentralizationApplication" />
+      <module name="name-normalization-and-centralization.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="name.normalization.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aws-io [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../aws-io" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="extract-to-dynamodb [test]" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CsvExerciseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercise-model-domain.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CsvExerciseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CsvExerciseTest.CsvExercises are properly converted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercise-model-domain.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CsvExerciseTest" />
+      <option name="METHOD_NAME" value="CsvExercises are properly converted" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseNameTest.Exercise name with #dbName returns #expectedResult when compared with #inputString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercise-model-domain.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExerciseNameTest" />
+      <option name="METHOD_NAME" value="Exercise name with #dbName returns #expectedResult when compared with #inputString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.NameNormalizationAndCentralizationApplication" />
+      <item itemvalue="Gradle.extract-to-dynamodb [test]" />
+      <item itemvalue="Gradle.aws-io [test]" />
+      <item itemvalue="JUnit.CsvExerciseTest" />
+      <item itemvalue="JUnit.CsvExerciseTest.CsvExercises are properly converted" />
+      <item itemvalue="JUnit.ExerciseNameTest.Exercise name with #dbName returns #expectedResult when compared with #inputString" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NameNormalizationAndCentralizationApplication" />
+        <item itemvalue="Gradle.aws-io [test]" />
+        <item itemvalue="JUnit.ExerciseNameTest.Exercise name with #dbName returns #expectedResult when compared with #inputString" />
+        <item itemvalue="JUnit.CsvExerciseTest.CsvExercises are properly converted" />
+        <item itemvalue="JUnit.CsvExerciseTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba679e3a-d3de-4e1d-9d8f-491859701bc1" name="Default Changelist" comment="" />
+      <created>1603480680617</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603480680617</updated>
+      <workItem from="1603480681720" duration="841000" />
+      <workItem from="1603481547559" duration="302000" />
+      <workItem from="1603481869629" duration="404000" />
+      <workItem from="1603482292637" duration="651000" />
+      <workItem from="1603494177346" duration="1388000" />
+      <workItem from="1603495660356" duration="11526000" />
+      <workItem from="1603583779468" duration="5828000" />
+      <workItem from="1603646857099" duration="135000" />
+      <workItem from="1603647009707" duration="202000" />
+      <workItem from="1605813436998" duration="26000" />
+      <workItem from="1605889217944" duration="1221000" />
+      <workItem from="1606400867574" duration="596000" />
+      <workItem from="1606490183662" duration="509000" />
+      <workItem from="1607105702477" duration="1138000" />
+      <workItem from="1607106923475" duration="191000" />
+      <workItem from="1607107138497" duration="853000" />
+    </task>
+    <task id="LOCAL-00001" summary="I've pulled all domain objects into their our gradle project since I'm likely to reuse them in other projects">
+      <created>1603566227403</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603566227403</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Moves aws-io into its own gradle project for use in other projects">
+      <created>1603582031814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603582031814</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I've pulled all domain objects into their our gradle project since I'm likely to reuse them in other projects" />
+    <MESSAGE value="Moves aws-io into its own gradle project for use in other projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moves aws-io into its own gradle project for use in other projects" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ca/benjaminnielsen/nameNormalization/ExerciseNameTest.groovy</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

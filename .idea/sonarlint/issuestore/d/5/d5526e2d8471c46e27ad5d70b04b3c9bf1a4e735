@@ -1,0 +1,6 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶øð
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(×Á©îûÿÿÿÿ
+Y
+java:S1610">Convert the abstract class "InputProcessor" into an interface.(×Á©îûÿÿÿÿ
