@@ -1,0 +1,12 @@
+ca/benjaminnielsen/inputProcessor/CsvProcessor.java
+ ca.benjaminnielsen.inputProcessor.CsvProcessor
+ca/benjaminnielsen/nameNormalization/NameGenerator.java
+ ca.benjaminnielsen.nameNormalization.NameGenerator
+ca/benjaminnielsen/CsvToDynamoDbApplication.java
+ ca.benjaminnielsen.CsvToDynamoDbApplication
+ca/benjaminnielsen/inputProcessor/InputProcessor.java
+ ca.benjaminnielsen.inputProcessor.InputProcessor
+ca/benjaminnielsen/nameNormalization/NamesContainer.java
+ ca.benjaminnielsen.nameNormalization.NamesContainer
+ca/benjaminnielsen/inputProcessor/IsNewExerciseVerifier.java
+ ca.benjaminnielsen.inputProcessor.IsNewExerciseVerifier

@@ -11,6 +11,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.events.S3Event;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -27,6 +28,7 @@ public class CsvToDynamoDbApplication implements RequestHandler<S3Event, String>
         DynamoDbHandler dbHandler = DynamoDbHandler.getInstance();
         logger.log("DynamoHandler Initialized\n");
 
+
         InputStreamReader streamReader;
         try {
             streamReader = new InputStreamReader(s3BucketHandler.getCsvInputStream());
@@ -36,13 +38,14 @@ public class CsvToDynamoDbApplication implements RequestHandler<S3Event, String>
         }
         logger.log("Reader Created\n");
 
-        ArrayList<InputProcessor> processors = new ArrayList<>();
-        processors.add(new CsvProcessor(streamReader));
+        CsvProcessor csvProcessor = new CsvProcessor(streamReader);
+
+        LocalDateTime lastLoadDate = dbHandler.getLastExerciseLoadDate();
+        if(lastLoadDate!=null)
+            csvProcessor.setLastLoadDate(lastLoadDate);
         logger.log("Csv to Bean created\n");
 
-        processors.stream().parallel().forEach(
-                inputProcessor -> dbHandler.saveAllExercise(inputProcessor.getDynamoStream().collect(Collectors.toList()))
-        );
+        dbHandler.saveAllExercise(csvProcessor.getDynamoStream().collect(Collectors.toList()));
 
         dbHandler.setLastExerciseLoad();
         return "Lambda Function completed successfully";
